@@ -20,10 +20,10 @@ passwordbar = driver.find_element("id", "password")
     #username
 actions =  ActionChains(driver)
 actions.click(usernamebar)
-usernamebar.send_keys("phamn2")
+usernamebar.send_keys("TYPE_USER_NAME")
     #password
 actions.click(passwordbar)
-passwordbar.send_keys("Brianna_0621")
+passwordbar.send_keys("TYPE_PASSWORD")
 passwordbar.send_keys(Keys.RETURN)
 
 time.sleep(20)
