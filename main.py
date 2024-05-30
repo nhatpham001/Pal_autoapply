@@ -16,7 +16,9 @@ driver.get("https://webapps2.uc.edu/elce/Student")
 usernamebar = driver.find_element(By.ID, "username")
 passwordbar = driver.find_element(By.ID, "password")
 
-creds = {"username": "phamn2", "password": "Brianna@0422"}
+#Enter your username and password as values of creds
+creds = {"username": "username", "password": "username"}
+
 # Username
 usernamebar.send_keys(creds["username"])
 # Password
@@ -64,7 +66,7 @@ while continuee:
             very_interested_button = driver.find_element(By.ID, "PositionRankId_2")
             save_button = driver.find_element(By.ID, "saveButton")
             
-            # Use JavaScript to click the buttons
+            # actions execution
             driver.execute_script("arguments[0].click();", very_interested_button)
             driver.execute_script("arguments[0].click();", save_button)
             
@@ -87,7 +89,7 @@ while continuee:
             EC.presence_of_element_located((By.TAG_NAME, "tbody"))
         )
 
-# Pause to keep the browser open if needed
+# Pause to keep the browser open
 input("Press Enter to close the browser...")
 
 driver.quit()
